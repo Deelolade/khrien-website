@@ -5,7 +5,7 @@ import heroImageTwo from '@/public/hero-image.jpg'
 
 const HeroSection = () => {
     return (
-        <div className='min-h-screen max-w-360 mx-auto bg-white my-6 shadow-sm rounded-3xl p-8 md:p-20'>
+        <div className='min-h-screen max-w-360 mx-auto bg-white my-6 mt-[13vh] shadow-sm rounded-3xl p-8 md:p-20'>
             <div className="flex justify-between items-center py-10 flex-col md:flex-row gap-10">
                 <div className="text-black space-y-6 w-full md:w-[48%]">
                     <h1 className="text-4xl md:text-7xl font-inter font-black uppercase italic leading-tight">
