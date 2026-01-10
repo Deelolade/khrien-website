@@ -1,2 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brandGreen: #2eb781;
+  --color-brandPurple: #934ab3;
+  --color-brandYellow: #f7a619;
+
+  --font-inter: "Inter", sans-serif;
+}
