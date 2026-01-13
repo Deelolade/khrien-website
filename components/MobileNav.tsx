@@ -9,7 +9,7 @@ const MobileNav = ({ menuOpen }: MobileNavProps) => {
     <div
       className={`bg-brandLightGray top-[9vh] fixed z-50 w-full lg:hidden ${menuOpen ? 'block' : 'hidden '}`}
     >
-      <nav className="px-5 pb-10 flex flex-col justify-between h-[93vh]">
+      <nav className="px-5 pb-10 flex flex-col justify-between h-screen">
         <div className="flex flex-col space-y-6 text-xl font-semibold p-2">
           <Link
             className=" text-black hover:text-brandPurple transition-all duration-50 ease-in-out"
@@ -22,6 +22,18 @@ const MobileNav = ({ menuOpen }: MobileNavProps) => {
             href="/about"
           >
             About
+          </Link>
+          <Link
+            className=" text-black hover:text-brandPurple transition-all duration-50 ease-in-out"
+            href="/solutions"
+          >
+            Solutions
+          </Link>
+          <Link
+            className=" text-black hover:text-brandPurple transition-all duration-50 ease-in-out"
+            href="/products"
+          >
+            Products
           </Link>
           <Link
             className=" text-black hover:text-brandPurple transition-all duration-50 ease-in-out"
