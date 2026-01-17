@@ -1,6 +1,7 @@
 import CtaSection from '@/components/CtaSection';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
+import House from '@/components/House';
 import SupportServices from '@/components/SupportServices';
 import ValuePropostition from '@/components/ValuePropostition';
 
@@ -11,6 +12,7 @@ const page = () => {
       <HeroSection />
       <ValuePropostition />
       <SupportServices />
+      <House/>
       <CtaSection />
       <Footer />
       </main>
