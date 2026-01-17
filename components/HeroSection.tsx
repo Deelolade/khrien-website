@@ -7,12 +7,17 @@ import BrandButton from './ui/BrandButton';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h- overflow-hidden max-w-360 mx-auto bg-white my-6 mt-[13vh] shadow-sm rounded-3xl p-8 md:p-20">
+    <section className="relative  overflow-hidden max-w-360 mx-auto bg-white my-6 mt-[13vh] shadow-sm rounded-3xl p-8 md:p-20">
       <div className="">
         <video  autoPlay muted loop playsInline
-        className='absolute top-0 left-0 inset-1 w-full h-full object-cover z-0' >
-          <source src='/landingPage-video.mp4'
-          type='video/mp4'/>
+        className='absolute top-0 left-0 inset-1 w-full h-full object-cover z-0'
+        preload='metadata'
+        poster='https://res.cloudinary.com/dluhzoptp/image/upload/f_auto,q_auto,w_1920/landingPage-poster_nlsczt
+' >
+          <source
+  src="https://res.cloudinary.com/dluhzoptp/video/upload/f_auto,q_auto,w_1920,h_1080,c_fill/landingPage-video_dsx4r1"
+  type="video/mp4"
+/>
         </video>
         <div className="absolute inset-0 bg-black/50 z-10" />
       </div>
@@ -40,7 +45,7 @@ const HeroSection = () => {
               buttonPosition="start"
               button="Explore Solutions"
               naviagateTo="#"
-              backgroundColor="brandGrey"
+              backgroundColor="brandGreen"
             />
           </div>
         </div>
