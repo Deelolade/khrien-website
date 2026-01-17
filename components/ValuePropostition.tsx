@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import ValuePropostitionImage from '@/public/hero-image.jpg';
+import ValuePropostitionImage from '@/public/khrien-landingpage.png';
 import BrandButton from './ui/BrandButton';
 import { TbTargetArrow } from 'react-icons/tb';
 import { HiOutlineLightBulb } from 'react-icons/hi';
@@ -36,13 +36,13 @@ const ValuePropostition = () => {
 
   return (
     <>
-      <section className=" max-w-360 mx-auto bg-brandGreen my-6 shadow-sm rounded-3xl p-8 md:p-20">
-        <div className="flex justify-center items-center gap-10 p-5">
+      <section className=" max-w-360 mx-auto bg-brandGreen my-6 shadow-sm rounded-3xl p-8 md:p-16">
+        <div className="flex justify-center items-center gap-20 p-5">
           <div className="w-[40%]">
-            <Image src={ValuePropostitionImage} alt="value-proposition-image" />
+            <Image src={ValuePropostitionImage} alt="value-proposition-image" className='w-full h-full object-cover scale-125' />
           </div>
           <div className="flex-1  text-black">
-            <h1 className="text-4xl md:text-8xl font-black uppercase italic leading-tight text-black">
+            <h1 className="text-4xl md:text-7xl font-black uppercase italic leading-tight text-black">
               Technology with Purpose.
             </h1>
             <p className="text-lg md:text-2xl font-normal text-black my-8 ">

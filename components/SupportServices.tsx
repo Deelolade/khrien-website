@@ -8,6 +8,7 @@ import {
   FiVideo,
   FiLayout,
 } from 'react-icons/fi';
+import BrandButton from './ui/BrandButton';
 
 const SupportServices = () => {
   const services = [
@@ -54,16 +55,26 @@ const SupportServices = () => {
       <Image
         src={heroImage}
         alt="Hero"
-        className="size-24 absolute right-20 top-20"
+        className="size-12 absolute right-32 top-20 animate-pulse"
       />
       <Image
         src={heroImage}
         alt="Hero"
-        className="size-24 absolute bottom-16 left-16"
+        className="size-12 absolute left-32 top-40 animate-pulse"
+      />
+      <Image
+        src={heroImage}
+        alt="Hero"
+        className="size-12 absolute right-5 top-1/2 animate-pulse"
+      />
+      <Image
+        src={heroImage}
+        alt="Hero"
+        className="size-12 absolute bottom-16 left-20 animate-pulse"
       />
       <div className="flex flex-col space-y-5 justify-center items-center max-w-3xl mx-auto text-center text-black">
-        <div className="">
-          <p>CREATIVE SUPPORT SERVICES</p>
+        <div className="text-2xl font-black">
+          <p className='capitalize'>creative support services</p>
         </div>
         <h1 className="text-6xl font-black leading-none text-black">
           Strategic Services that Complement Technology
@@ -101,6 +112,17 @@ const SupportServices = () => {
             </p>
           </div>
         ))}
+      </div>
+      <div className="flex flex-col space-y-5 justify-center items-center max-w-3xl mx-auto text-center text-black">
+        <p className="text-2xl">
+          These services ensure your software, tools, and business present exceptionally everywhere they show up.
+        </p>
+        <BrandButton
+            buttonPosition="center"
+            button="Explore Services"
+            naviagateTo="/services"
+            backgroundColor="brandGreen"
+          />
       </div>
     </section>
   );
