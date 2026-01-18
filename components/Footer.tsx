@@ -14,7 +14,7 @@ const Footer = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+        className="relative z-10 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
       >
         <div className="logo">
           <Image src={logo} width={100} height={100} alt="" />

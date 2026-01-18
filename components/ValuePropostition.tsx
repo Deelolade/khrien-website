@@ -58,41 +58,55 @@ const ValuePropostition = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className=" max-w-360 mx-auto bg-brandGreen my-6 shadow-sm rounded-3xl p-8 md:p-16"
+        className=" max-w-360 mx-auto bg-brandGreen my-6 shadow-sm rounded-3xl p-6 md:p-16"
       >
-        <div className="flex justify-center items-center gap-20 p-5">
-          <div className="w-[40%]">
-            <Image src={ValuePropostitionImage} alt="value-proposition-image" className='w-full h-full object-cover scale-125' />
-          </div>
-          <div className="flex-1  text-black">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20 p-2 md:p-5">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full md:w-[40%]"
+          >
+            <Image src={ValuePropostitionImage} alt="value-proposition-image" className='w-full h-auto object-cover scale-110 md:scale-125' />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex-1 text-black text-center md:text-left"
+          >
             <h1 className="text-4xl md:text-7xl font-black uppercase italic leading-tight text-black">
               Technology with Purpose.
             </h1>
-            <p className="text-lg md:text-2xl font-normal text-black my-8 ">
+            <p className="text-lg md:text-2xl font-normal text-black my-6 md:my-8 ">
               {' '}
               Khrien builds custom software, applications, and tools that help
               businesses overcome operational challenges and scale with
               confidence. We also provide strategic creative services to make
               your brand and products resonate.
             </p>
-            <BrandButton
-              buttonPosition="start"
-              button="How We Help"
-              naviagateTo="#"
-              backgroundColor="brandYellow"
-            />
-            <div className="w-full flex gap-4 mt-6 justify-start items-center">
-              <h1 className=" text-2xl font-semibold text-black italic ">
+            <div className='flex justify-center md:justify-start'>
+              <BrandButton
+                buttonPosition="start"
+                button="How We Help"
+                naviagateTo="#"
+                backgroundColor="brandYellow"
+              />
+            </div>
+            <div className="w-full flex gap-4 mt-8 justify-center md:justify-start items-center">
+              <h1 className=" text-xl md:text-2xl font-semibold text-black italic ">
                 Innovation.
               </h1>
-              <h1 className=" text-2xl font-semibold text-black italic ">
+              <h1 className=" text-xl md:text-2xl font-semibold text-black italic ">
                 Growth.
               </h1>
-              <h1 className=" text-2xl font-semibold text-black italic ">
+              <h1 className=" text-xl md:text-2xl font-semibold text-black italic ">
                 Impact.
               </h1>
             </div>
-          </div>
+          </motion.div>
         </div>
       </motion.section>
       <section className="max-w-360 mx-auto my-8 shadow-sm rounded-3xl  ">

@@ -27,7 +27,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl md:text-7xl font-black uppercase italic leading-tight text-white"
+            className="text-3xl md:text-7xl font-black uppercase italic leading-tight text-white"
           >
             <span>We Build Tools & Digital Products</span>
             <span> for Modern Businesses.</span>

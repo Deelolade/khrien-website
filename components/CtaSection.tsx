@@ -9,13 +9,13 @@ const CtaSection = () => {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.8 }}
-      className="max-w-360 mx-auto bg-brandGray my-6 shadow-sm rounded-3xl p-8 md:p-20"
+      className="max-w-360 mx-auto bg-brandGray my-6 shadow-sm rounded-3xl p-6 md:p-20"
     >
       <div className=" flex flex-col justify-center items-center text-black max-w-4xl mx-auto">
-        <h1 className="text-4xl lg:text-7xl font-black text-center">
+        <h1 className="text-3xl md:text-6xl lg:text-7xl font-black text-center">
           Build Smarter. Build with Khrien.
         </h1>
-        <p className="text-2xl text-center my-6">
+        <p className="text-xl md:text-2xl text-center my-6">
           Whether you’re launching a product, structuring your operations, or
           scaling a business, we’re here to help with tools and creative
           excellence.

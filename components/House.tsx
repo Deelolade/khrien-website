@@ -15,19 +15,21 @@ const House = () => {
                 transition={{ duration: 0.8 }}
                 className="max-w-360 mx-auto bg-brandGray my-6 shadow-sm rounded-3xl p-8 md:p-20 md:pr-0 md:pb-0 pr-0 pb-0 overflow-hidden"
             >
-                <div className="flex justify-between items-center gap-10">
-                    <div className="w-1/2 py-8 md:py-0">
-                        <p className="text-lg md:text-2xl font-normal text-black my-8 ">THE HOUSE — YOUR GROWTH NETWORK</p>
+                <div className="flex flex-col md:flex-row justify-between items-center gap-10">
+                    <div className="w-full md:w-1/2 py-8 md:py-0 text-center md:text-left">
+                        <p className="text-lg md:text-2xl font-normal text-black my-4 md:my-8 ">THE HOUSE — YOUR GROWTH NETWORK</p>
                         <h1 className="text-4xl md:text-6xl font-black uppercase italic leading-tight text-black">A Community for Business Builders</h1>
-                        <p className="text-lg md:text-2xl font-normal text-black my-8 ">The House of Khrien is more than a group — it's a home for business owners on a growth journey.</p>
-                        <BrandButton
-                            buttonPosition="start"
-                            button="Join the House"
-                            naviagateTo="#"
-                            backgroundColor="brandYellow"
-                        />
+                        <p className="text-lg md:text-2xl font-normal text-black my-6 md:my-8 ">The House of Khrien is more than a group — it's a home for business owners on a growth journey.</p>
+                        <div className="flex justify-center md:justify-start">
+                            <BrandButton
+                                buttonPosition="start"
+                                button="Join the House"
+                                naviagateTo="#"
+                                backgroundColor="brandYellow"
+                            />
+                        </div>
                     </div>
-                    <div className="w-1/2 relative">
+                    <div className="w-full md:w-1/2 relative">
                         <motion.div
                             initial={{ x: 50, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
@@ -45,19 +47,19 @@ const House = () => {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
-                    className=" px-5 my-8"
+                    className=" px-5 my-12"
                 >
-                    <div className="flex w-full justify-between items-center ">
-                        <div className="">
-                            <h1 className="text-brandYellow text-5xl text-black">Foundation</h1>
+                    <div className="flex flex-wrap w-full justify-center md:justify-between items-center gap-6 md:gap-0">
+                        <div className="text-center">
+                            <h1 className="text-3xl md:text-5xl text-black">Foundation</h1>
                         </div>
-                        <Image src={HouseIcon} className="size-16 object-cover" alt=''></Image>
-                        <div className="">
-                            <h1 className="text-brandYellow text-5xl text-black">Structure</h1>
+                        <Image src={HouseIcon} className="hidden md:block size-16 object-cover" alt=''></Image>
+                        <div className="text-center">
+                            <h1 className="text-3xl md:text-5xl text-black">Structure</h1>
                         </div>
-                        <Image src={HouseIcon} className="size-16 object-cover" alt=''></Image>
-                        <div className="">
-                            <h1 className="text-brandYellow text-5xl text-black">Occupancy</h1>
+                        <Image src={HouseIcon} className="hidden md:block size-16 object-cover" alt=''></Image>
+                        <div className="text-center">
+                            <h1 className="text-3xl md:text-5xl text-black">Occupancy</h1>
                         </div>
                     </div>
                 </motion.div>

@@ -73,36 +73,36 @@ const SupportServices = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.8 }}
-      className="relative max-w-360 mx-auto bg-brandYellow my-6 shadow-sm rounded-3xl p-8 md:p-20"
+      className="relative max-w-360 mx-auto bg-brandYellow my-6 shadow-sm rounded-3xl p-6 md:p-20"
     >
       <Image
         src={heroImage}
         alt="Hero"
-        className="size-12 absolute right-32 top-20 animate-pulse"
+        className="hidden md:block size-12 absolute right-32 top-20 animate-pulse"
       />
       <Image
         src={heroImage}
         alt="Hero"
-        className="size-12 absolute left-32 top-40 animate-pulse"
+        className="hidden md:block size-12 absolute left-32 top-40 animate-pulse"
       />
       <Image
         src={heroImage}
         alt="Hero"
-        className="size-12 absolute right-5 top-1/2 animate-pulse"
+        className="hidden md:block size-12 absolute right-5 top-1/2 animate-pulse"
       />
       <Image
         src={heroImage}
         alt="Hero"
-        className="size-12 absolute bottom-16 left-20 animate-pulse"
+        className="hidden md:block size-12 absolute bottom-16 left-20 animate-pulse"
       />
       <div className="flex flex-col space-y-5 justify-center items-center max-w-3xl mx-auto text-center text-black">
-        <div className="text-2xl font-black">
+        <div className="text-xl md:text-2xl font-black">
           <p className='capitalize'>creative support services</p>
         </div>
-        <h1 className="text-6xl font-black leading-none text-black">
+        <h1 className="text-3xl md:text-6xl font-black leading-none text-black">
           Strategic Services that Complement Technology
         </h1>
-        <p className="text-2xl">
+        <p className="text-lg md:text-2xl">
           Our creative service suite enhances your digital presence and supports
           product adoption
         </p>

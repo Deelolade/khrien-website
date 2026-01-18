@@ -9,15 +9,15 @@ const TrustSection = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className=" relative max-w-360 mx-auto bg-brandGreen my-6 shadow-sm rounded-3xl p-8 md:p-20 text-center overflow-hidden"
+            className=" relative max-w-360 mx-auto bg-brandGreen my-6 shadow-sm rounded-3xl p-6 md:p-20 text-center overflow-hidden"
         >
-            <div className="text-2xl font-black text-center">
+            <div className="text-xl md:text-2xl font-black text-center">
                 <p className='capitalize'>TRUSTED BY INDUSTRY LEADERS</p>
             </div>
-            <h1 className="text-6xl font-black leading-none text-black">
+            <h1 className="text-3xl md:text-6xl font-black leading-none text-black mt-4">
                 Proven Track Record of Strategic Excellence
             </h1>
-            <p className="text-2xl mt-4">
+            <p className="text-lg md:text-2xl mt-4">
                 We've empowered diverse businesses with tools and services that drive real growth.
             </p>
 
