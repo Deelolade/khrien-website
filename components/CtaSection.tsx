@@ -1,8 +1,16 @@
+"use client"
 import BrandButton from './ui/BrandButton';
+import { motion } from 'motion/react';
 
 const CtaSection = () => {
   return (
-    <section className="max-w-360 mx-auto bg-brandGray my-6 shadow-sm rounded-3xl p-8 md:p-20">
+    <motion.section
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+      className="max-w-360 mx-auto bg-brandGray my-6 shadow-sm rounded-3xl p-8 md:p-20"
+    >
       <div className=" flex flex-col justify-center items-center text-black max-w-4xl mx-auto">
         <h1 className="text-4xl lg:text-7xl font-black text-center">
           Build Smarter. Build with Khrien.
@@ -27,7 +35,7 @@ const CtaSection = () => {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image';
 import ValuePropostitionImage from '@/public/khrien-landingpage.png';
 import BrandButton from './ui/BrandButton';
@@ -5,6 +6,7 @@ import { TbTargetArrow } from 'react-icons/tb';
 import { HiOutlineLightBulb } from 'react-icons/hi';
 import { PiUsersThreeLight } from 'react-icons/pi';
 import { IconType } from 'react-icons';
+import { motion } from 'motion/react';
 
 type Value = {
   title: string;
@@ -34,9 +36,30 @@ const ValuePropostition = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
     <>
-      <section className=" max-w-360 mx-auto bg-brandGreen my-6 shadow-sm rounded-3xl p-8 md:p-16">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className=" max-w-360 mx-auto bg-brandGreen my-6 shadow-sm rounded-3xl p-8 md:p-16"
+      >
         <div className="flex justify-center items-center gap-20 p-5">
           <div className="w-[40%]">
             <Image src={ValuePropostitionImage} alt="value-proposition-image" className='w-full h-full object-cover scale-125' />
@@ -71,12 +94,19 @@ const ValuePropostition = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
       <section className="max-w-360 mx-auto my-8 shadow-sm rounded-3xl  ">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-5"
+        >
           {values.map((value, idx) => {
             return (
-              <div
+              <motion.div
+                variants={itemVariants}
                 className="bg-brandLightGray text-black text-center p-10 rounded-xl flex flex-col justify-center items-center space-y-8 hover:bg-brandYellow transition-all duration-500 group"
                 key={idx}
               >
@@ -85,10 +115,10 @@ const ValuePropostition = () => {
                 </div>
                 <h1 className="text-3xl font-semibold mb-3">{value.title}</h1>
                 <p className="text-xl leading-relaxed">{value.description}</p>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </section>
     </>
   );

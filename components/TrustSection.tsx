@@ -1,8 +1,16 @@
+"use client"
+import { motion } from "motion/react";
 import LogoMarquee from "./LogoMarquee";
 
 const TrustSection = () => {
     return (
-        <section className=" relative max-w-360 mx-auto bg-brandGreen my-6 shadow-sm rounded-3xl p-8 md:p-20 text-center overflow-hidden">
+        <motion.section
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className=" relative max-w-360 mx-auto bg-brandGreen my-6 shadow-sm rounded-3xl p-8 md:p-20 text-center overflow-hidden"
+        >
             <div className="text-2xl font-black text-center">
                 <p className='capitalize'>TRUSTED BY INDUSTRY LEADERS</p>
             </div>
@@ -14,7 +22,7 @@ const TrustSection = () => {
             </p>
 
             <LogoMarquee />
-        </section>
+        </motion.section>
     );
 };
 export default TrustSection;

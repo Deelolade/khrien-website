@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image';
 import heroImage from '@/public/star-icon.webp';
 import {
@@ -9,6 +10,7 @@ import {
   FiLayout,
 } from 'react-icons/fi';
 import BrandButton from './ui/BrandButton';
+import { motion } from 'motion/react';
 
 const SupportServices = () => {
   const services = [
@@ -50,8 +52,29 @@ const SupportServices = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.9, y: 20 },
+    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <section className="relative max-w-360 mx-auto bg-brandYellow my-6 shadow-sm rounded-3xl p-8 md:p-20">
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+      className="relative max-w-360 mx-auto bg-brandYellow my-6 shadow-sm rounded-3xl p-8 md:p-20"
+    >
       <Image
         src={heroImage}
         alt="Hero"
@@ -84,10 +107,17 @@ const SupportServices = () => {
           product adoption
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-12">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-12"
+      >
         {services.map((service, idx) => (
-          <div
+          <motion.div
             key={idx}
+            variants={itemVariants}
             className="rounded-2xl border border-brandPurple/30 py-12 px-8 
                  shadow-sm hover:shadow-xl hover:-translate-y-1
                  transition-all duration-300 bg-brandGray group text-center"
@@ -110,21 +140,21 @@ const SupportServices = () => {
             <p className="text-black text-lg leading-relaxed text-center">
               {service.description}
             </p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
       <div className="flex flex-col space-y-5 justify-center items-center max-w-3xl mx-auto text-center text-black">
         <p className="text-2xl">
           These services ensure your software, tools, and business present exceptionally everywhere they show up.
         </p>
         <BrandButton
-            buttonPosition="center"
-            button="Explore Services"
-            naviagateTo="/services"
-            backgroundColor="brandGreen"
-          />
+          buttonPosition="center"
+          button="Explore Services"
+          naviagateTo="/services"
+          backgroundColor="brandGreen"
+        />
       </div>
-    </section>
+    </motion.section>
   );
 };
 
