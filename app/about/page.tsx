@@ -2,7 +2,8 @@ import React from 'react';
 import HeroSection from './HeroSection';
 import TextMarquee from './TextMarquee';
 import AboutContent from './AboutContent';
-import MissionSection from './MissionSection';
+import ValuesSection from './ValuesSection';
+import ApproachSection from './ApproachSection';
 import TrustSection from '@/components/TrustSection';
 import CtaSection from '@/components/CtaSection';
 import Footer from '@/components/Footer';
@@ -13,7 +14,8 @@ const AboutPage = () => {
       <HeroSection />
       <TextMarquee />
       <AboutContent />
-      <MissionSection />
+      <ValuesSection />
+      <ApproachSection />
       <TrustSection />
       <CtaSection />
       <Footer />
