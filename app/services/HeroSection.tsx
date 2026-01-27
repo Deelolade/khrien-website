@@ -25,7 +25,7 @@ const HeroSection = () => {
           We don’t treat branding, content, or design as standalone deliverables.
  Each service is approached as part of a larger system — supporting product adoption, trust, and performance.
         </motion.p>
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
@@ -37,7 +37,7 @@ const HeroSection = () => {
             naviagateTo="#"
             backgroundColor="brandYellow"
           />
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
