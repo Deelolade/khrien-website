@@ -6,7 +6,7 @@ import BrandButton from '@/components/ui/BrandButton';
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-brandPurple overflow-hidden max-w-360 mx-auto my-6 mt-[12vh] md:mt-[16vh] shadow-sm rounded-3xl h-[50vh] md:h-[70vh] flex items-center justify-center">
+    <section className="relative bg-brandPurple overflow-hidden max-w-360 mx-auto my-6 mt-[14vh] md:mt-[16vh] shadow-sm rounded-3xl h-[50vh] md:h-[70vh] flex items-center justify-center">
       <div className="relative z-20 text-white space-y-6 w-full text-center px-4 max-w-4xl">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ const HeroSection = () => {
           className="text-lg md:text-2xl font-semibold text-white/80"
         >
           We don’t treat branding, content, or design as standalone deliverables.
- Each service is approached as part of a larger system — supporting product adoption, trust, and performance.
+          Each service is approached as part of a larger system — supporting product adoption, trust, and performance.
         </motion.p>
         {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
