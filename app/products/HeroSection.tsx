@@ -6,20 +6,20 @@ import BrandButton from '@/components/ui/BrandButton';
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-brandPurple overflow-hidden max-w-360 mx-auto my-6 mt-[12vh] md:mt-[14vh] shadow-sm rounded-3xl flex flex-col justify-center items-center h-[50vh] md:h-[70vh]">
-      
+    <section className="rel ative bg-brandPurple overflow-hidden max-w-360 mx-auto my-6 mt-[13vh] md:mt-[16vh] shadow-sm rounded-3xl flex flex-col justify-center items-center gap-1 h-[50vh] md:h-[70vh]">
+
       {/* Image Section */}
       <motion.div
         initial={{ opacity: 0, scale: 1.05 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative w-full flex-1 bg-red-50"
+        className=""
       >
         <Image
           src="/white.png"
-          alt="FirmDesk Background"
-          fill
-          className="object-cover w-full bg-red-400"
+          alt="FirmDesk Image"
+          width={400} height={100}
+          className=""
           priority
         />
       </motion.div>
@@ -43,17 +43,23 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex flex-wrap items-center justify-center gap-4"
         >
-          <BrandButton
+          {/* <BrandButton
             buttonPosition="center"
             button="Request a Demo"
-            naviagateTo="#"
+            navigateTo="#"
+            backgroundColor="brandYellow"
+          /> */}
+          <BrandButton
+            buttonPosition="center"
+            button="Request Access"
+            navigateTo="#"
             backgroundColor="brandYellow"
           />
           <BrandButton
             buttonPosition="center"
-            button="Request Access"
-            naviagateTo="#"
-            backgroundColor="brandYellow"
+            button="See pitchdeck"
+            navigateTo="#"
+            backgroundColor="brandGreen"
           />
         </motion.div>
       </div>

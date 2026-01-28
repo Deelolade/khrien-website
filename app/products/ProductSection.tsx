@@ -74,12 +74,12 @@ const ProductSection = () => {
                 {product.description}
               </p>
             </div>
-            
+
             <div className="mt-8 flex flex-col gap-3">
               <BrandButton
                 buttonPosition="start"
                 button="Learn More"
-                naviagateTo={`products/${product.navigateTo}`}
+                navigateTo={`products/${product.navigateTo}`}
                 backgroundColor={product.buttonColor}
               />
             </div>

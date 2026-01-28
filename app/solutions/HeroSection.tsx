@@ -35,7 +35,7 @@ const HeroSection = () => {
           <BrandButton
             buttonPosition="center"
             button=" Book a Discovery Call"
-            naviagateTo="#"
+            navigateTo="#"
             backgroundColor="brandYellow"
           />
         </motion.div>

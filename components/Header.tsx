@@ -174,7 +174,7 @@ const Header = () => {
           <BrandButton
             buttonPosition="center"
             button="Contact Us"
-            naviagateTo="contact"
+            navigateTo="contact"
             backgroundColor="brandYellow"
             menuOpen={menuOpen}
           />
@@ -183,19 +183,16 @@ const Header = () => {
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <span
-              className={`h-0.5 w-6 bg-black transition-all duration-300 ${
-                menuOpen ? 'translate-y-1.5 rotate-45' : ''
-              }`}
+              className={`h-0.5 w-6 bg-black transition-all duration-300 ${menuOpen ? 'translate-y-1.5 rotate-45' : ''
+                }`}
             />
             <span
-              className={`h-0.5 w-4 bg-black transition-all duration-300 ${
-                menuOpen ? 'opacity-0' : ''
-              }`}
+              className={`h-0.5 w-4 bg-black transition-all duration-300 ${menuOpen ? 'opacity-0' : ''
+                }`}
             />
             <span
-              className={`h-0.5 w-6 bg-black transition-all duration-300 ${
-                menuOpen ? '-translate-y-1.5 -rotate-45' : ''
-              }`}
+              className={`h-0.5 w-6 bg-black transition-all duration-300 ${menuOpen ? '-translate-y-1.5 -rotate-45' : ''
+                }`}
             />
           </div>
         </div>

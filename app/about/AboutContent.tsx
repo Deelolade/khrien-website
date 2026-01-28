@@ -63,7 +63,7 @@ const AboutContent = () => {
             <BrandButton
               buttonPosition="start"
               button="Learn More"
-              naviagateTo="services"
+              navigateTo="services"
               backgroundColor="brandGreen"
             />
           </div>

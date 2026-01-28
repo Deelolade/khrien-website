@@ -47,13 +47,13 @@ const HeroSection = () => {
             <BrandButton
               buttonPosition="start"
               button="Get Started"
-              naviagateTo="#"
+              navigateTo="#"
               backgroundColor="brandYellow"
             />
             <BrandButton
               buttonPosition="start"
               button="Explore Solutions"
-              naviagateTo="#"
+              navigateTo="#"
               backgroundColor="brandGreen"
             />
           </motion.div>

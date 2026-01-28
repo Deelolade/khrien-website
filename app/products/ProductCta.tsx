@@ -24,13 +24,13 @@ const ProductCta = () => {
                     <BrandButton
                         buttonPosition="center"
                         button="Request a Demo"
-                        naviagateTo="#"
+                        navigateTo="#"
                         backgroundColor="brandGreen"
                     />
                     <BrandButton
                         buttonPosition="center"
                         button="Request Access"
-                        naviagateTo="#"
+                        navigateTo="#"
                         backgroundColor="brandPurple"
                     />
                 </div>

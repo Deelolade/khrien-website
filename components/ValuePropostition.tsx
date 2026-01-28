@@ -91,7 +91,7 @@ const ValuePropostition = () => {
               <BrandButton
                 buttonPosition="start"
                 button="How We Help"
-                naviagateTo="#"
+                navigateTo="#"
                 backgroundColor="brandYellow"
               />
             </div>

@@ -22,7 +22,7 @@ const SolutionsCta = () => {
                 <BrandButton
                     buttonPosition="center"
                     button="Start a Discovery Call"
-                    naviagateTo="#"
+                    navigateTo="#"
                     backgroundColor="brandYellow"
                 />
             </div>

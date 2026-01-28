@@ -24,13 +24,13 @@ const CtaSection = () => {
           <BrandButton
             buttonPosition="center"
             button="Let&apos;s Build Together"
-            naviagateTo="#"
+            navigateTo="#"
             backgroundColor="brandGreen"
           />
           <BrandButton
             buttonPosition="center"
             button="Contact Us"
-            naviagateTo="#"
+            navigateTo="#"
             backgroundColor="brandYellow"
           />
         </div>

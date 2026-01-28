@@ -24,7 +24,7 @@ const House = () => {
                             <BrandButton
                                 buttonPosition="start"
                                 button="Join the House"
-                                naviagateTo="#"
+                                navigateTo="#"
                                 backgroundColor="brandYellow"
                             />
                         </div>

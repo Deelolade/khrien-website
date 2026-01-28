@@ -102,7 +102,6 @@ const page = () => {
         transition={{ duration: 0.8 }}
         className="max-w-360 mx-auto bg-brandYellow my-12 mb-24 rounded-3xl p-12 md:p-24 text-center"
       >
-        <Image src='public/' alt=''/>
         <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-black uppercase mb-10 leading-none">
           Ready to make your mark?
         </h2>

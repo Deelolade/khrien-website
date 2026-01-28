@@ -150,7 +150,7 @@ const SupportServices = () => {
         <BrandButton
           buttonPosition="center"
           button="Explore Services"
-          naviagateTo="/services"
+          navigateTo="/services"
           backgroundColor="brandGreen"
         />
       </div>
