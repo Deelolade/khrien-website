@@ -41,7 +41,7 @@ const House = () => {
                     </div>
                 </div>
             </motion.section>
-            <section>
+            <section className="max-w-360 mx-auto">
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}

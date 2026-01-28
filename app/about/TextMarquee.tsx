@@ -13,7 +13,7 @@ const TextMarquee = () => {
   const duplicatedPhrases = [...phrases, ...phrases];
 
   return (
-    <div className="w-full py-6 overflow-hidden bg-black relative">
+    <div className="w-full py-6 overflow-hidden bg-black relative max-w-360 mx-auto">
       <motion.div
         className="flex whitespace-nowrap gap-8"
         animate={{

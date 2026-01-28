@@ -30,7 +30,7 @@ const AboutContent = () => {
               height={500}
               className="w-full h-auto object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
           </div>
         </motion.div>
 
