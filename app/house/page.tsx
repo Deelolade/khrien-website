@@ -1,16 +1,28 @@
-import Footer from '@/components/Footer'
-import React from 'react'
-import HeroSection from './HeroSection'
+import Footer from '@/components/Footer';
+import React from 'react';
+import HeroSection from './HeroSection';
+import PromiseSection from './PromiseSection';
+import PathsSection from './PathsSection';
+import MembershipSection from './MembershipSection';
+import ToolsSection from './ToolsSection';
+import JoinSection from './JoinSection';
+import HouseCta from './HouseCta';
 
 const page = () => {
-    return (
-        <>
-            <main className="px-4 lg:px-9 mt-[12vh] md:mt-[14vh]">
-                <HeroSection />
-            </main>
-            <Footer />
-        </>
-    )
-}
+  return (
+    <>
+      <main className="px-4 lg:px-9 mt-[12vh] md:mt-[14vh]">
+        <HeroSection />
+        <PromiseSection />
+        <PathsSection />
+        <MembershipSection />
+        <ToolsSection />
+        {/* <JoinSection /> */}
+        <HouseCta />
+      </main>
+      <Footer />
+    </>
+  );
+};
 
-export default page
+export default page;

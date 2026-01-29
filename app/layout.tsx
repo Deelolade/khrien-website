@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-       suppressHydrationWarning
+        suppressHydrationWarning
         className={`bg-black text-white min-h-screen ${bricolage_grotesque.className}`}
       >
         <Header />
