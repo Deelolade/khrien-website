@@ -5,6 +5,17 @@ import formImage from '@/public/contactus-form-image.jpeg';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { toast } from 'react-toastify';
+import { motion } from 'framer-motion';
+type FormData = {
+  firstname: string;
+  lastname: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+  contactMethod: string;
+};
 const ContactForm = () => {
   const validationSchema = yup.object().shape({
     firstname: yup.string().required('Enter your first name'),
@@ -26,13 +37,26 @@ const ContactForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({ resolver: yupResolver(validationSchema) });
-  const submitForm = (data: any) => {
-    console.log(data);
+    reset
+  } = useForm<FormData>({ resolver: yupResolver(validationSchema), defaultValues: { firstname: '', lastname: '', email: '', phone: '', subject: '', message: '', contactMethod: '' }, });
+  const submitForm = (data: FormData) => {
+    try {
+      console.log(data);
+      reset();
+      toast.success('Form submitted successfully');
+    } catch (error) {
+      console.log(error);
+      toast.error('Form submission failed');
+    }
   };
   return (
     <section className="min-h-screen flex justify-center items-start px-3 lg:p-20 my-6 gap-10">
-      <div className=" w-full lg:w-1/2 p-5">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8, x: -100 }}
+        whileInView={{ opacity: 1, scale: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        className=" w-full lg:w-1/2 p-5">
         <h3 className="text-3xl font-semibold mb-2">Get in Touch with Us</h3>
         <p className="text-lg">
           We’d love to hear from you! Whether you have questions, need a
@@ -40,7 +64,7 @@ const ContactForm = () => {
           ready to help.
         </p>
         <form action="" className="mt-6 flex flex-col space-y-8" onSubmit={handleSubmit(submitForm)}>
-          <div className=" flex flex-col md:flex-row space-x-6 space-y-4">
+          <div className=" flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0">
             <div className=" flex flex-col space-y-2 flex-1">
               <label htmlFor="firstName" className="text-brandGray">
                 First Name
@@ -76,7 +100,7 @@ const ContactForm = () => {
               )}
             </div>
           </div>
-          <div className="flex flex-col md:flex-row space-x-6 space-y-4">
+          <div className="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0">
             <div className="flex flex-col space-y-2 flex-1">
               <label htmlFor="email">Email</label>
               <input
@@ -164,10 +188,15 @@ const ContactForm = () => {
             </button>
           </div>
         </form>
-      </div>
-      <div className="relative w-full hidden lg:block lg:w-1/2 min-h-100 lg:h-225 overflow-hidden">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: 100, scale: 0.8 }}
+        whileInView={{ opacity: 1, x: 0, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        className="relative w-full hidden lg:block lg:w-1/2 min-h-100 lg:h-225 overflow-hidden">
         <Image src={formImage} alt="" fill className="object-cover" />
-      </div>
+      </motion.div>
     </section>
   );
 };
