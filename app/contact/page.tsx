@@ -1,11 +1,15 @@
-import React from 'react'
-import HeroSection from './HeroSection'
+import React from 'react';
+import HeroSection from './HeroSection';
+import Footer from '@/components/Footer';
+import ContactForm from './ContactForm';
 const page = () => {
   return (
     <div>
-        <HeroSection/>
+      <HeroSection />
+      <ContactForm />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;
