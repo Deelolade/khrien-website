@@ -42,12 +42,12 @@ const PathsSection = () => {
     return (
         <section className="max-w-360 mx-auto my-32 px-4 lg:px-0">
             <div className="flex flex-col md:flex-row justify-center items-center mb-20 gap-8">
-                <div className="bg-red-300">
+                <div className=" text-center">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-5xl md:text-8xl font-black uppercase italic leading-none text-white"
+                        className="text-5xl md:text-8xl font-black uppercase italic leading-none text-white text-center"
                     >
                         <span className="text-brandPurple">Paths</span>
                     </motion.h2>
@@ -55,17 +55,6 @@ const PathsSection = () => {
                         Every member enters at their level and grows through clearly defined paths.
                     </p>
                 </div>
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    className="md:w-1/3 text-right"
-                >
-                    <p className="text-lg md:text-xl text-black/60 font-medium italic">
-                        Just like a real building, strong businesses are built in stages. These paths represent phases of growth — not a hierarchy.
-                    </p>
-                </motion.div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

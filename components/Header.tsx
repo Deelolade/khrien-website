@@ -72,27 +72,27 @@ const Header = () => {
       lenis.destroy();
     };
   }, []);
-  useEffect(() => {
-    const lenis = lenisRef.current;
-    if (!lenis) return;
+  // useEffect(() => {
+  //   const lenis = lenisRef.current;
+  //   if (!lenis) return;
 
-    if (menuOpen) {
-      lenis.stop();
-      document.body.style.overflow = 'hidden';
-    } else {
-      lenis.start();
-      document.body.style.overflow = '';
-    }
+  //   if (menuOpen) {
+  //     lenis.stop();
+  //     document.body.style.overflow = 'hidden';
+  //   } else {
+  //     lenis.start();
+  //     document.body.style.overflow = '';
+  //   }
 
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [menuOpen]);
+  //   return () => {
+  //     document.body.style.overflow = '';
+  //   };
+  // }, [menuOpen]);
 
   return (
     <div className="relative">
       <header
-        className={`${hidden ? '-translate-y-[150%] opacity-0' : 'translate-y-0'} fixed w-full z-50 top-0 md:top-4 left-1/2 -translate-x-1/2 flex justify-between lg:justify-between items-center py-4 max-w-360 bg-brandLightGray  ${menuOpen ? '' : 'shadow-sm'} text-black my-0 px-6 sm:px-8 lg:px-6 rounded-0 lg:rounded-2xl transition-all duration-500 ease-in-out`}
+        className={`${hidden ? '-translate-y-[150%] opacity-0' : 'translate-y-0'} fixed w-full z-50 top-0 md:top-4 left-1/2 -translate-x-1/2 flex justify-between lg:justify-between items-center py-4 max-w-360 bg-brandGray lg:bg-brandLightGray/20 lg:backdrop-blur-2xl ${menuOpen ? '' : 'shadow-sm'} text-white my-0 px-6 sm:px-8 lg:px-6 rounded-0 lg:rounded-2xl transition-all duration-500 ease-in-out`}
       >
         <Image src={logo} width={100} loading="eager" height={100} alt="" />
         <motion.nav
