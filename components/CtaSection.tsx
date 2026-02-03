@@ -27,12 +27,12 @@ const CtaSection = () => {
             navigateTo="#"
             backgroundColor="brandGreen"
           />
-          <BrandButton
+          {/* <BrandButton
             buttonPosition="center"
             button="Contact Us"
             navigateTo="contact"
             backgroundColor="brandYellow"
-          />
+          /> */}
         </div>
       </div>
     </motion.section>
