@@ -86,12 +86,12 @@ const WhatWeBuild = () => {
                     <motion.div
                         key={idx}
                         variants={itemVariants}
-                        className={`${item.color} ${item.textColor || 'text-black'} p-8 rounded-3xl min-h-[200px] flex flex-col justify-between border-5 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200`}
+                        className={`p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors`}
                     >
-                        <div className="text-4xl mb-4">
+                        <div className="text-3xl mb-4">
                             {item.icon}
                         </div>
-                        <h3 className="text-2xl md:text-3xl font-black uppercase leading-none">
+                        <h3 className="text-xl font-bold mb-2">
                             {item.title}
                         </h3>
                     </motion.div>
