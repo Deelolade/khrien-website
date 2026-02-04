@@ -8,6 +8,7 @@ import Image from 'next/image';
 import logo from '@/public/sample-logo.png';
 import { motion, AnimatePresence } from 'motion/react';
 import { MdArrowDropDown } from 'react-icons/md';
+import Navlinks from './ui/Navlinks';
 
 const Header = () => {
   const lastYRef = useRef(0);
@@ -92,7 +93,7 @@ const Header = () => {
   return (
     <div className="relative">
       <header
-        className={`${hidden ? '-translate-y-[150%] opacity-0' : 'translate-y-0'} fixed w-full z-50 top-0 md:top-4 left-1/2 -translate-x-1/2 flex justify-between lg:justify-between items-center py-4 max-w-360 bg-brandGray lg:bg-brandLightGray/10 lg:backdrop-blur-xl ${menuOpen ? '' : 'shadow-sm'} text-white my-0 px-6 sm:px-8 lg:px-6 rounded-0 lg:rounded-2xl transition-all duration-500 ease-in-out`}
+        className={`${hidden ? '-translate-y-[150%] opacity-0' : 'translate-y-0'} fixed w-full z-50 top-0 md:top-4 left-1/2 -translate-x-1/2 flex justify-between lg:justify-between items-center py-4 max-w-360 bg-brandGray lg:bg-brandLightGray/10 lg:backdrop-blur-xl ${menuOpen ? '' : 'shadow-sm'} text-white my-0 px-6 sm:px-8 lg:px-6 rounded-0 lg:rounded-2xl transition-all duration-500 ease-in-out mx-auto`}
       >
         <Image src={logo} width={100} loading="eager" height={100} alt="" />
         <motion.nav
@@ -102,12 +103,11 @@ const Header = () => {
           className=" hidden lg:flex space-x-12 text-xl font-semibold"
         >
           <motion.div variants={linkVariants}>
-            <Link
-              className="hover:text-brandPurple transition-all duration-50 ease-in-out"
+            <Navlinks
               href="/"
             >
               Home
-            </Link>
+            </Navlinks>
           </motion.div>
           <motion.div
             variants={linkVariants}
@@ -132,12 +132,6 @@ const Header = () => {
                 </Link>
                 <Link
                   className="px-10 hover:text-brandPurple transition-all duration-50 ease-in-out"
-                  href="/solutions"
-                >
-                  Solutions
-                </Link>
-                <Link
-                  className="px-10 hover:text-brandPurple transition-all duration-50 ease-in-out"
                   href="/products"
                 >
                   Products
@@ -146,28 +140,25 @@ const Header = () => {
             </div>
           </motion.div>
           <motion.div variants={linkVariants}>
-            <Link
-              className="hover:text-brandPurple transition-all duration-50 ease-in-out"
+            <Navlinks
               href="/services"
             >
               Services
-            </Link>
+            </Navlinks>
           </motion.div>
-          {/* <motion.div variants={linkVariants}>
-            <Link
-              className="hover:text-brandPurple transition-all duration-50 ease-in-out"
-              href="/house"
-            >
-              House
-            </Link>
-          </motion.div> */}
           <motion.div variants={linkVariants}>
-            <Link
-              className="hover:text-brandPurple transition-all duration-50 ease-in-out"
+            <Navlinks
+              href="/solutions"
+            >
+              Solutions
+            </Navlinks>
+          </motion.div>
+          <motion.div variants={linkVariants}>
+            <Navlinks
               href="/academy"
             >
               Academy
-            </Link>
+            </Navlinks>
           </motion.div>
         </motion.nav>
         <div className="px-4 flex items-center space-x-6">
