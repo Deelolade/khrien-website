@@ -32,7 +32,7 @@ const Services = () => {
       buttonColor: 'brandYellow',
       navigateTo: 'social-media-management'
     },
-     {
+    {
       id: 4,
       title: 'Content Creation',
       subtitle: 'Khrien Service',
@@ -60,9 +60,9 @@ const Services = () => {
       navigateTo: 'ui-ux-and-web-solutions'
     }
   ];
-  
+
   return (
-    <section className="max-w-360 mx-auto my-12 px-4 md:px-6 lg:py-10">
+    <section className="max-w-360 mx-auto px-4 md:px-6 lg:py-12 my-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -71,10 +71,10 @@ const Services = () => {
         className="text-center mb-12"
       >
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4">
-          Our Products
+          Our Services
         </h2>
         <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto">
-          Discover our suite of innovative products designed to transform the way you work
+          Discover our suite of innovative services designed to transform the way you work
         </p>
       </motion.div>
 
@@ -86,22 +86,19 @@ const Services = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
-            className={`${product.backgroundColor} rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between min-h-96`}
+            className={`p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors flex flex-col justify-between min-h-96`}
           >
             <div className="space-y-4">
               <div>
-                <h3 className="text-2xl md:text-3xl font-black text-black uppercase">
+                <h3 className="text-2xl font-bold mb-2 uppercase">
                   {product.title}
                 </h3>
-                <h4 className="text-xl md:text-2xl font-bold text-black/80 mt-2">
-                  {product.subtitle}
-                </h4>
               </div>
-              <p className="text-base md:text-lg text-black/70 leading-relaxed">
+              <p className="text-white/60 text-lg">
                 {product.description}
               </p>
             </div>
-            
+
             <div className="mt-8 flex flex-col gap-3">
               <BrandButton
                 buttonPosition="start"
