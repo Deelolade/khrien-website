@@ -7,7 +7,7 @@ type BrandButtonType = {
   backgroundColor: string;
   menuOpen?: boolean
 };
-const BrandButton = ({
+const ProductsButton = ({
   buttonPosition,
   button,
   navigateTo,
@@ -19,7 +19,7 @@ const BrandButton = ({
       <div
         className={` ${menuOpen ? 'hidden' : ''} whitespace-nowrap border-5 rounded-full border-r border-t border-black bg-${backgroundColor} px-5 lg:px-10 py-2 lg:py-3 hover:bg-brandPurple hover:text-white transition-all duration-400 ease-in-out`}
       >
-        <Link href={`/${navigateTo}`} className="text-lg lg:text-xl font-bold">
+        <Link href={`${navigateTo}`} className="text-lg lg:text-xl font-bold">
           {button}
         </Link>
       </div>
@@ -27,4 +27,4 @@ const BrandButton = ({
   );
 };
 
-export default BrandButton;
+export default ProductsButton;

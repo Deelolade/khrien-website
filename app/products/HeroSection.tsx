@@ -2,11 +2,11 @@
 
 import Image from 'next/image';
 import { motion } from 'motion/react';
-import BrandButton from '@/components/ui/BrandButton';
+import ProductsButton from './BrandButton';
 
 const HeroSection = () => {
   return (
-    <section className="rel ative bg-brandPurple overflow-hidden max-w-360 mx-auto my-6 mt-[13vh] md:mt-[16vh] shadow-sm rounded-3xl flex flex-col justify-center items-center gap-1 h-[50vh] md:h-[70vh]">
+    <section className="relative bg-brandPurple overflow-hidden max-w-360 mx-auto my-6 mt-[13vh] md:mt-[16vh] shadow-sm rounded-3xl flex flex-col justify-center items-center gap-1 h-[50vh] md:h-[70vh]">
 
       {/* Image Section */}
       <motion.div
@@ -43,19 +43,13 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex flex-wrap items-center justify-center gap-4"
         >
-          {/* <BrandButton
-            buttonPosition="center"
-            button="Request a Demo"
-            navigateTo="#"
-            backgroundColor="brandYellow"
-          /> */}
-          <BrandButton
+          <ProductsButton
             buttonPosition="center"
             button="See Demo"
-            navigateTo="#"
+            navigateTo="https://querulous-ashien-khrien-29067abe.koyeb.app/"
             backgroundColor="brandYellow"
           />
-          <BrandButton
+          <ProductsButton
             buttonPosition="center"
             button="See Pitch Deck"
             navigateTo="#"

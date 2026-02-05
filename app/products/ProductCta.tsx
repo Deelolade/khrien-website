@@ -2,6 +2,7 @@
 
 import BrandButton from '@/components/ui/BrandButton';
 import { motion } from 'motion/react';
+import ProductsButton from './BrandButton';
 
 const ProductCta = () => {
     return (
@@ -21,10 +22,10 @@ const ProductCta = () => {
                     our team will guide you through the best path.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <BrandButton
+                    <ProductsButton
                         buttonPosition="center"
-                        button="Request a Demo"
-                        navigateTo="#"
+                        button="See Demo"
+                        navigateTo="https://querulous-ashien-khrien-29067abe.koyeb.app/"
                         backgroundColor="brandGreen"
                     />
                     <BrandButton
