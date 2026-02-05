@@ -6,20 +6,20 @@ import { motion } from 'motion/react';
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden max-w-360 mx-auto my-6 mt-[13vh] md:mt-[16vh] shadow-sm rounded-3xl h-[50vh] md:h-[70vh] flex items-center justify-center">
-      <Image
+      {/* <Image
         src="/about-bg.jpeg"
         alt="About Khrien Background"
         fill
         className="object-cover"
         priority
-      />
-      <div className="absolute inset-0 bg-linear-to-b from-black/30 via-black/50 to-black/70 z-10" />
+      /> */}
+      {/* <div className="absolute inset-0 bg-linear-to-b from-black/30 via-black/50 to-black/70 z-10" /> */}
       <div className="relative z-20 text-center px-4">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-white text-5xl md:text-8xl font-black uppercase italic drop-shadow-lg"
+          className="text-3xl md:text-5xl lg:text-6xl font-black leading-tight text-white"
         >
           About Khrien
         </motion.h1>
@@ -27,7 +27,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-          className="text-white/80 text-lg md:text-2xl mt-4 max-w-2xl mx-auto font-medium"
+          className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto font-semibold"
         >
           Where Innovation Meets Purpose
         </motion.p>
