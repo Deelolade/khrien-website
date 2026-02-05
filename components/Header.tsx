@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import MobileNav from './MobileNav';
 import BrandButton from './ui/BrandButton';
 import Image from 'next/image';
-import logo from '@/public/sample-logo.png';
+import logo from '@/public/white-logo.png';
 import { motion, AnimatePresence } from 'motion/react';
 import { MdArrowDropDown } from 'react-icons/md';
 import Navlinks from './ui/Navlinks';

@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image';
-import logo from '@/public/sample-logo.png';
+import logo from '@/public/white-logo.png';
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { motion } from 'motion/react';
@@ -31,7 +31,7 @@ const Footer = () => {
           <ul className='space-y-2 flex flex-col'>
             <Link href='/about' className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>About Us</Link>
             <Link href='/services' className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>Services</Link>
-            <Link href='/house' className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>House</Link>
+            {/* <Link href='/house' className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>House</Link> */}
             <Link href='/academy' className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>Academy</Link>
             <Link href='/contact' className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>Contact Us</Link>
           </ul>
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
       </motion.div>
       <div className="absolute bottom-0 z-0 left-1/2 -translate-x-1/2 translate-y-1/4">
-        <Image src={logo} className='scale-200 z-0 opacity-10' alt=''></Image>
+        <Image src={logo} className='scale-200 z-0 opacity-30' alt=''></Image>
       </div>
     </footer>
   );

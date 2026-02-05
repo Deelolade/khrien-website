@@ -45,12 +45,12 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             className="flex flex-col md:flex-row gap-4 items-center md:items-start justify-center"
           >
-            <BrandButton
+            {/* <BrandButton
               buttonPosition="start"
               button="Get Started"
               navigateTo="#"
               backgroundColor="brandYellow"
-            />
+            /> */}
             <BrandButton
               buttonPosition="start"
               button="Explore Solutions"
