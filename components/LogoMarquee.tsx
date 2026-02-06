@@ -1,28 +1,26 @@
 'use client';
 
 import { motion } from 'motion/react';
-import React from 'react';
+import Image from 'next/image';
+
 
 const LogoMarquee = () => {
     // Array of client names/logos for the marquee
     const clients = [
-        'Nike',
-        'Adidas',
-        'Apple',
-        'Microsoft',
-        'Google',
-        'Amazon',
-        'Meta',
-        'Tesla',
-        'Disney',
-        'Samsung',
+        "/alister-greene.png",
+        "/beanewborn.png",
+        "/bentlab-kids.png",
+        "/gaise-baba.png",
+        "/moade-associates.png",
+        "/neegles.png",
+        "/TFC-Logo.png",
     ];
 
     // We duplicate the array to ensure seamless infinite scrolling
     const duplicatedClients = [...clients, ...clients];
 
     return (
-        <div className="w-full mt-12 py-6 overflow-hidden relative">
+        <div className="w-full mt-12 py-2 overflow-hidden relative">
             <div
                 className="absolute inset-y-0 left-0 w-32 z-10 pointer-events-none"
                 style={{ background: 'linear-gradient(to right, var(--color-brandGreen), transparent)' }}
@@ -33,12 +31,12 @@ const LogoMarquee = () => {
             />
 
             <motion.div
-                className="flex whitespace-nowrap gap-16"
+                className="flex w-max"
                 animate={{
                     x: ['0%', '-50%'],
                 }}
                 transition={{
-                    duration: 10,
+                    duration: 30,
                     ease: 'linear',
                     repeat: Infinity,
                 }}
@@ -46,9 +44,9 @@ const LogoMarquee = () => {
                 {duplicatedClients.map((client, index) => (
                     <div
                         key={index}
-                        className="text-2xl md:text-3xl font-black uppercase italic text-black/40 hover:text-black transition-colors duration-300"
+                        className="shrink-0 px-5"
                     >
-                        {client}
+                        <Image src={client} alt="Client Logo" width={400} height={400} className='w-[300px] h-[300px] md:w-[400px] md:h-[200px] object-contain transition-transform hover:scale-105' />
                     </div>
                 ))}
             </motion.div>
