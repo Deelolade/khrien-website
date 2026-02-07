@@ -4,12 +4,9 @@ import { motion } from 'motion/react'
 
 const ServicesSection = () => {
     const servicesItems = [
-        "/services/services-branding.jpg",
-        "/services/services-branding-two.jpg",
-        "/services/services-branding-three.jpg",
-        "/services/services-branding-four.jpg",
-        "/services/services-branding-five.jpg",
-        "/services/services-branding-six.png"
+        "/graphics/100.jpg",
+        "/graphics/tsboard.png",
+
     ]
     return (
         <section className='max-w-360 mx-auto my-10 px-4 '>
