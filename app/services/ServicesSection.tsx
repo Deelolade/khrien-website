@@ -12,8 +12,9 @@ const ServicesSection = () => {
         "/services/services-branding-six.png"
     ]
     return (
-        <section>
-            <div className="max-w-360 mx-auto px-4 md:px-6 lg:py-12 my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <section className='max-w-360 mx-auto my-10 px-4 '>
+            <h1 className='text-4xl capitalize my-3 font-bold'>Our portfolio</h1>
+            <div className="max-w-360 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 {servicesItems.map((item, index) => (
                     <motion.div
                         key={index}
