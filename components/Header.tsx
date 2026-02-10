@@ -5,7 +5,8 @@ import { useEffect, useRef, useState } from 'react';
 import MobileNav from './MobileNav';
 import BrandButton from './ui/BrandButton';
 import Image from 'next/image';
-import logo from '@/public/white-logo.png';
+import whitelogo from '@/public/white-logo.png';
+import purplelogo from '@/public/purple-logo.png';
 import { motion, AnimatePresence } from 'motion/react';
 import { MdArrowDropDown } from 'react-icons/md';
 import Navlinks from './ui/Navlinks';
@@ -37,7 +38,6 @@ const Header = () => {
   useEffect(() => {
     menuOpenRef.current = menuOpen;
   }, [menuOpen]);
-  // ... (rest of search/replace below)
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -73,29 +73,27 @@ const Header = () => {
       lenis.destroy();
     };
   }, []);
-  // useEffect(() => {
-  //   const lenis = lenisRef.current;
-  //   if (!lenis) return;
-
-  //   if (menuOpen) {
-  //     lenis.stop();
-  //     document.body.style.overflow = 'hidden';
-  //   } else {
-  //     lenis.start();
-  //     document.body.style.overflow = '';
-  //   }
-
-  //   return () => {
-  //     document.body.style.overflow = '';
-  //   };
-  // }, [menuOpen]);
-
   return (
     <div className="relative">
       <header
         className={`${hidden ? '-translate-y-[150%] opacity-0' : 'translate-y-0'} fixed w-full z-50 top-0 md:top-4 left-1/2 -translate-x-1/2 flex justify-between lg:justify-between items-center py-4 max-w-360 bg-brandGray lg:bg-brandLightGray/10 lg:backdrop-blur-xl ${menuOpen ? '' : 'shadow-sm'} text-white my-0 px-6 sm:px-8 lg:px-6 rounded-0 lg:rounded-2xl transition-all duration-500 ease-in-out mx-auto`}
       >
-        <Image src={logo} width={100} loading="eager" height={100} alt="" />
+        <Image
+          src={whitelogo}
+          width={100}
+          loading="eager"
+          height={100}
+          alt=""
+          className="hidden lg:block"
+        />
+        <Image
+          src={purplelogo}
+          width={100}
+          loading="eager"
+          height={100}
+          alt=""
+          className="block lg:hidden"
+        />
         <motion.nav
           variants={navVariants}
           initial="hidden"
@@ -103,11 +101,7 @@ const Header = () => {
           className=" hidden lg:flex space-x-12 text-xl font-semibold"
         >
           <motion.div variants={linkVariants}>
-            <Navlinks
-              href="/"
-            >
-              Home
-            </Navlinks>
+            <Navlinks href="/">Home</Navlinks>
           </motion.div>
           <motion.div
             variants={linkVariants}
@@ -140,25 +134,13 @@ const Header = () => {
             </div>
           </motion.div>
           <motion.div variants={linkVariants}>
-            <Navlinks
-              href="/services"
-            >
-              Services
-            </Navlinks>
+            <Navlinks href="/services">Services</Navlinks>
           </motion.div>
           <motion.div variants={linkVariants}>
-            <Navlinks
-              href="/solutions"
-            >
-              Solutions
-            </Navlinks>
+            <Navlinks href="/solutions">Solutions</Navlinks>
           </motion.div>
           <motion.div variants={linkVariants}>
-            <Navlinks
-              href="/academy"
-            >
-              Academy
-            </Navlinks>
+            <Navlinks href="/academy">Academy</Navlinks>
           </motion.div>
         </motion.nav>
         <div className="px-4 flex items-center space-x-6">
@@ -174,22 +156,31 @@ const Header = () => {
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <span
-              className={`h-0.5 w-6 bg-black transition-all duration-300 ${menuOpen ? 'translate-y-1.5 rotate-45' : ''
-                }`}
+              className={`h-0.5 w-6 bg-black transition-all duration-300 ${
+                menuOpen ? 'translate-y-1.5 rotate-45' : ''
+              }`}
             />
             <span
-              className={`h-0.5 w-4 bg-black transition-all duration-300 ${menuOpen ? 'opacity-0' : ''
-                }`}
+              className={`h-0.5 w-4 bg-black transition-all duration-300 ${
+                menuOpen ? 'opacity-0' : ''
+              }`}
             />
             <span
-              className={`h-0.5 w-6 bg-black transition-all duration-300 ${menuOpen ? '-translate-y-1.5 -rotate-45' : ''
-                }`}
+              className={`h-0.5 w-6 bg-black transition-all duration-300 ${
+                menuOpen ? '-translate-y-1.5 -rotate-45' : ''
+              }`}
             />
           </div>
         </div>
       </header>
       <AnimatePresence>
-        {menuOpen && <MobileNav key="mobile-nav" menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
+        {menuOpen && (
+          <MobileNav
+            key="mobile-nav"
+            menuOpen={menuOpen}
+            setMenuOpen={setMenuOpen}
+          />
+        )}
       </AnimatePresence>
     </div>
   );
