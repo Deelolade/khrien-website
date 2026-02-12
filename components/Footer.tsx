@@ -39,9 +39,9 @@ const Footer = () => {
         <div className="space-y-4">
           <h1 className='text-2xl font-bold'>Connect with us</h1>
           <div className=" flex space-x-4">
-            <span className='border border-brandGray p-3 rounded-full'><FaFacebook className='scale-150 hover:text-brandYellow transition-all duration-100 ease-in-out' /></span>
-            <span className='border border-brandGray p-3 rounded-full'><FaInstagram className='scale-150 hover:text-brandYellow transition-all duration-100 ease-in-out' /></span>
-            <span className='border border-brandGray p-3 rounded-full'><FaLinkedin className='scale-150 hover:text-brandYellow transition-all duration-100 ease-in-out' /></span>
+            <a href="https://www.facebook.com/share/16bZdmZNAb/" target='_blank' rel='noopener noreferrer' className='border border-brandGray p-3 rounded-full'><FaFacebook className='scale-150 hover:text-brandYellow transition-all duration-100 ease-in-out' /></a>
+            <a href="https://www.instagram.com/thisis_khrien?igsh=MWJocjI5ZWdsbHF5Zw==" target='_blank' rel='noopener noreferrer' className='border border-brandGray p-3 rounded-full'><FaInstagram className='scale-150 hover:text-brandYellow transition-all duration-100 ease-in-out' /></a>
+            <a href="https://www.linkedin.com/company/khrien/" target='_blank' rel='noopener noreferrer' className='border border-brandGray p-3 rounded-full'><FaLinkedin className='scale-150 hover:text-brandYellow transition-all duration-100 ease-in-out' /></a>
           </div>
         </div>
       </motion.div>
