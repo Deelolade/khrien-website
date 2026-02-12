@@ -1,6 +1,7 @@
 "use client"
 import { motion } from 'motion/react';
 import BrandButton from './ui/BrandButton';
+import Meetings from './ui/Meetings';
 
 const HeroSection = () => {
   return (
@@ -45,18 +46,13 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             className="flex flex-col md:flex-row gap-4 items-center md:items-start justify-center"
           >
-            {/* <BrandButton
-              buttonPosition="start"
-              button="Get Started"
-              navigateTo="#"
-              backgroundColor="brandYellow"
-            /> */}
             <BrandButton
               buttonPosition="start"
               button="Explore Solutions"
               navigateTo="solutions"
               backgroundColor="brandGreen"
             />
+            <Meetings />
           </motion.div>
         </div>
       </div>
