@@ -5,6 +5,7 @@ import BrandButton from '@/components/ui/BrandButton'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
 import ServicesSection from './ServicesSection'
+import ViewMoreProject from '../../ViewMoreProject'
 
 const page = () => {
   const deliverables = [
@@ -95,6 +96,9 @@ const page = () => {
           </p>
         </div>
       </motion.section>
+
+      {/* External Links Section */}
+      <ViewMoreProject />
 
       {/* CTA Section */}
       <motion.section

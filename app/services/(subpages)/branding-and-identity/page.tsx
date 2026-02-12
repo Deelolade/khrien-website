@@ -4,6 +4,7 @@ import { motion } from 'motion/react'
 import BrandButton from '@/components/ui/BrandButton'
 import Footer from '@/components/Footer'
 import ServicesSection from './ServicesSection'
+import ViewMoreProject from '../../ViewMoreProject'
 
 const page = () => {
   const deliverables = [
@@ -75,23 +76,8 @@ const page = () => {
         </div>
       </section>
       <ServicesSection />
-      {/* Case Study Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="max-w-360 mx-auto bg-brandGray my-12 rounded-3xl p-8 md:p-16 lg:p-20"
-      >
-        <div className="max-w-4xl mx-auto text-center md:text-left">
-          <h3 className="text-sm md:text-base font-black text-brandPurple uppercase tracking-[0.2em] mb-6">
-            Case Study / Example
-          </h3>
-          <p className="text-2xl md:text-4xl lg:text-5xl font-black text-black leading-tight border-l-0 md:border-l-8 border-brandPurple md:pl-10">
-            Positioned a digital product for enterprise adoption through a refined identity system and messaging framework.
-          </p>
-        </div>
-      </motion.section>
+      {/* External Links Section */}
+      <ViewMoreProject />
 
       {/* CTA Section */}
       <motion.section
