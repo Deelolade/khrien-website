@@ -7,6 +7,13 @@ import ValuePropostition from '@/components/ValuePropostition';
 import TrustSection from '@/components/TrustSection';
 import WhatsApp from '@/components/ui/WhatsApp';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Home | Build Smarter with Khrien',
+  description: 'Khrien helps business owners build smarter solutions through creative excellence and strategic execution.',
+};
+
 const page = () => {
   return (
     <>

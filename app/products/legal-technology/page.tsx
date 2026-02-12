@@ -6,6 +6,12 @@ import AccessSection from "@/app/products/AccessSection"
 import TechnologySection from "@/app/products/TechnologySection"
 import ProductCta from "@/app/products/ProductCta"
 import Footer from "@/components/Footer"
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Legal Technology | Smart Solutions for Legal Firms',
+    description: 'Khrien provides specialized technology solutions for legal firms, focusing on efficiency, automation, and strategic growth.',
+};
 
 const page = () => {
     return (

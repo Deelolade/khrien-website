@@ -5,6 +5,12 @@ import ProcessSection from './ProcessSection'
 import WhyChooseUs from './WhyChooseUs'
 import SolutionsCta from './SolutionsCta'
 import Footer from '@/components/Footer'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Our Solutions | Business Tools & Scaling Strategies',
+    description: 'Khrien provides custom business solutions, from process automation to strategic tools, helping you build smarter and scale faster.',
+};
 
 const page = () => {
     return (

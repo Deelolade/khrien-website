@@ -7,8 +7,12 @@ import Header from '@/components/Header';
 const bricolage_grotesque = Bricolage_Grotesque({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Khrien',
-  description: 'Where Business Owners Build Smarter solutions.',
+  title: {
+    default: 'Khrien | Creative Excellence & Business Solutions',
+    template: '%s | Khrien',
+  },
+  description: 'Where Business Owners Build Smarter solutions. Scaling excellence through design, strategy, and technology.',
+  keywords: ['Khrien', 'Business Solutions', 'Creative Agency', 'UI/UX Design', 'Branding', 'Web Development'],
 };
 
 export default function RootLayout({

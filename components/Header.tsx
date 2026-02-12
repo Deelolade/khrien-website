@@ -140,7 +140,7 @@ const Header = () => {
             <Navlinks href="/solutions">Solutions</Navlinks>
           </motion.div>
           <motion.div variants={linkVariants}>
-            <Navlinks href="/academy">Academy</Navlinks>
+            <a href="https://academy.khrien.com/" target="_blank" rel="noopener noreferrer" className='hover:text-brandPurple'>Academy</a>
           </motion.div>
         </motion.nav>
         <div className="px-4 flex items-center space-x-6">
@@ -156,19 +156,16 @@ const Header = () => {
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <span
-              className={`h-0.5 w-6 bg-black transition-all duration-300 ${
-                menuOpen ? 'translate-y-1.5 rotate-45' : ''
-              }`}
+              className={`h-0.5 w-6 bg-black transition-all duration-300 ${menuOpen ? 'translate-y-1.5 rotate-45' : ''
+                }`}
             />
             <span
-              className={`h-0.5 w-4 bg-black transition-all duration-300 ${
-                menuOpen ? 'opacity-0' : ''
-              }`}
+              className={`h-0.5 w-4 bg-black transition-all duration-300 ${menuOpen ? 'opacity-0' : ''
+                }`}
             />
             <span
-              className={`h-0.5 w-6 bg-black transition-all duration-300 ${
-                menuOpen ? '-translate-y-1.5 -rotate-45' : ''
-              }`}
+              className={`h-0.5 w-6 bg-black transition-all duration-300 ${menuOpen ? '-translate-y-1.5 -rotate-45' : ''
+                }`}
             />
           </div>
         </div>
